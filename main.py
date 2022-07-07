@@ -1,4 +1,5 @@
 import random
+import numpy as np
 
 number_list=[]
 for numbers in range(1,101):
@@ -35,8 +36,17 @@ difficulty[leveled]()
 
 Guess=random.choice(number_list)
 print (Guess)
+
+
+def find_nearest(number):
+    arrayed=[5,15,25,35,45,55,65,75,85,95]
+    array = np.asarray(arrayed)
+    idx = (np.abs(array - number)).argmin()
+    return array[idx]
+    
+created=find_nearest(Guess)
 numbered=[]
-for numbers in range(Guess-5,Guess+5):
+for numbers in range(created-5,created+6):
     numbered.append(numbers)
 # print(numbered)
 not_over=False
