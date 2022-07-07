@@ -73,7 +73,7 @@ def calculate_value(value):
             return (f"You are pretty close. Remaining {trials} trials.Try again")
         elif value>100:
             trials-=1
-            return (f"Select a value in range provided")
+            return (f"Select a value in range provided. Remaining {trials} trials.Try again")
         
     
     
