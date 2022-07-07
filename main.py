@@ -47,15 +47,15 @@ def calculate_value(value):
     else:
         if value in numbered and value!=Guess and trials!=0:
             trials-=1
-            return (f"You are close, Value is within {numbered[0]}-{numbered[-1]}.You have {trials} trials remaining.Try again")
+            return (f"You are close, Number is within {numbered[0]}-{numbered[-1]}.You have {trials} trials remaining.Try again")
             
         elif value>50 and value!=Guess and Guess<50 and trials!=0:
             trials-=1
-            return (f"Guess is less than 50. You have got {trials} trials remainng.Try again")
+            return (f"Number is less than 50. You have got {trials} trials remainng.Try again")
             
         elif value<50 and value!=Guess and Guess>50 and trials!=0:
             trials-=1
-            return (f"Guess is more than 50. You have got {trials} trials remainng.Try again")
+            return (f"Number is more than 50. You have got {trials} trials remainng.Try again")
         elif trials==0:
             return (f"You lost. Trials are {trials}")
         elif value not in numbered:
