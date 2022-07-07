@@ -68,12 +68,9 @@ def calculate_value(value):
             return (f"Number is more than 50. You have got {trials} trials remainng.Try again")
         elif trials==0:
             return (f"You lost. Trials are {trials}")
-        elif value not in numbered and value<=100:
+        elif value not in numbered:
             trials-=1
             return (f"You are pretty close. Remaining {trials} trials.Try again")
-        elif value>100:
-            trials-=1
-            return (f"Select a value in range provided. Remaining {trials} trials.Try again")
         
     
     
